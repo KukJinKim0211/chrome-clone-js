@@ -22,13 +22,13 @@ function paintGrretings(username) {
   greeting.classList.remove("hidden");
 }
 
-loginForm.addEventListener("submit", onLoginSubmit);
+//loginForm.addEventListener("submit", onLoginSubmit);
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 console.log(savedUsername);
 if (savedUsername === null){
-  loginForm.classList.remove("hidden");
-  loginForm.addEventListener("submit", onLoginSubmit);
+  //loginForm.classList.remove("hidden");
+  //loginForm.addEventListener("submit", onLoginSubmit);
 } else {
   paintGrretings(savedUsername);
 }
