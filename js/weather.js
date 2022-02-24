@@ -12,7 +12,11 @@ function onGeoOk(position) {
     const weatherContainer = document.querySelector("#weather span:first-child");
     const cityContainer = document.querySelector("#weather span:last-child");
     weatherContainer.innerText = `${data.weather[0].main} / ${data.main.temp_min} ~ ${data.main.temp_max} `;
-    cityContainer.innerText = data.name;
+    const weather = data.weather[0].main;
+    if (weather === "Clear")
+      weatherContainer.innerText = "맑음";
+    weatherContainer.innerText += ` / 최저기온:${data.main.temp_min} / 최고기온:${data.main.temp_max}`;
+    //cityContainer.innerText = data.name;
 
     //console.log(data.name, data.weather[0].main)
   });

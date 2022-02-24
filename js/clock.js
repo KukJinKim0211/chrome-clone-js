@@ -1,9 +1,12 @@
 const clock = document.querySelector("h2#clock");
-
-clock.innerText = "haha";
+const day = document.querySelector("h2#dat");
 
 function getClock() {
   const date = new Date();
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const dat = date.getDate();
+  day.innerText = `${year}-${month}-${dat}`;
   const hours= date.getHours().toString().padStart(2, "0");
   const minute = String(date.getMinutes()).padStart(2, "0");
   const second = String(date.getSeconds()).padStart(2, "0");
