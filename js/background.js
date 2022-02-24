@@ -15,7 +15,7 @@ const bgImage = document.createElement("img");
 const bodyback = document.querySelector("body");
 //bodyback.style.backgroundImage.url = '../img/노을.jpg'
 function backGroundImageRandom() {
-  bodyback.style.backgroundImage = `url(../img/${chosenImage}`;
+  bodyback.style.backgroundImage = `url(./img/${chosenImage}`;
 }
 backGroundImageRandom();
 /*function paintImage() {
